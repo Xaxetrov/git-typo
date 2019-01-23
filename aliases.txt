@@ -1,1 +1,2 @@
 git config --global alias.dad '!curl https://icanhazdadjoke.com/ && git add'
+git config --global alias.vommit '!git log -p --oneline --binary && git commit'
