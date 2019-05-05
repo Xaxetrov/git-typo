@@ -5,6 +5,30 @@ git() {
     curl -s https://icanhazdadjoke.com
     command git add "${@:2}"
 
+  elif [ "$1" == "ass" ]; then
+    echo '
+                          /\          /\
+                         ( \\        // )
+                          \ \\      // /
+                           \_\\||||//_/
+                            \/ _  _ \
+                           \/|(O)(O)|
+                          \/ |      |
+      ___________________\/  \      /
+     //                //     |____|
+    //                ||     /      \
+   //|                \|     \ 0  0 /
+  // \       )         V    / \____/
+ //   \     /        (     /
+""     \   /_________|  |_/
+       /  /\   /     |  ||
+      /  / /  /      \  ||
+      | |  | |        | ||
+      | |  | |        | ||
+      |_|  |_|        |_||
+       \_\  \_\        \_\\'
+    command git add "${@:2}"
+
   # commit
   elif [ "$1" == "vommit" ]; then
     curl -s http://whatthecommit.com/index.txt
