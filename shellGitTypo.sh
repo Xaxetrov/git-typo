@@ -3,6 +3,7 @@ git() {
   # add
   if [ "$1" == "dad" ]; then
     curl -s https://icanhazdadjoke.com
+    echo
     command git add "${@:2}"
 
   elif [ "$1" == "ass" ]; then
