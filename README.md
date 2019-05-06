@@ -6,6 +6,13 @@ This is written in simple shell syntax and should be supported on most common sh
 
 ## Installation
 
+### Requirements
+
+* git
+* curl
+
+### Instructions
+
 Simply source the shell file: `source shellGitTypo.sh` or `. shellGitTypo.sh`.
 
 You can add this to startup scripts like `.bashrc` to always have these easter eggs ready !
