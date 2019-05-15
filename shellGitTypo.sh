@@ -1,12 +1,12 @@
 git() {
 
   # add
-  if [ "$1" == "dad" ]; then
+  if [ "$1" = "dad" ]; then
     curl -s https://icanhazdadjoke.com
     echo
     command git add "${@:2}"
 
-  elif [ "$1" == "ass" ]; then
+  elif [ "$1" = "ass" ]; then
     echo '
                           /\          /\
                          ( \\        // )
@@ -31,11 +31,11 @@ git() {
     command git add "${@:2}"
 
   # commit
-  elif [ "$1" == "vommit" ]; then
+  elif [ "$1" = "vommit" ]; then
     curl -s http://whatthecommit.com/index.txt
     command git commit "${@:2}"
 
-  elif [ "$1" == "commit" -a "$2" == "--amen" ]; then
+  elif [ "$1" = "commit" -a "$2" = "--amen" ]; then
     # bible array generation
     bible[0]="Let those among you who are without sin be the first to throw the stone. The crowd looked at Jesus, believing he had a good point. Then Jesus picked up a stone. - Irony 8:19"
     bible[1]="First shalt thou take out the Holy Pin. Then shalt thou count to three, no more, no less. Three shall be the number thou shalt count, and the number of the counting shall be three. Four shalt thou not count, neither count thou two, excepting that thou then proceed to three. Five is right out. Once the number three, being the third number, be reached, then lobbest thou thy Holy Hand Grenade of Antioch towards thy foe, who, being naughty in My sight, shall snuff it. - Arthur 1:2:5"
@@ -53,7 +53,7 @@ git() {
     command git commit --amen "${@:3}"
 
   # stash
-  elif [ "$1" == "stash" -a "$2" == "poop" ]; then
+  elif [ "$1" = "stash" -a "$2" = "poop" ]; then
     echo "
   )  )
  (   ) (
