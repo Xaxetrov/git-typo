@@ -1,5 +1,7 @@
 git() {
-
+  # enable zsh compatibility
+  if [ -n "$ZSH_VERSION" ]; then emulate -L ksh; fi
+  
   # add
   if [ "$1" = "dad" ]; then
     curl -s https://icanhazdadjoke.com
