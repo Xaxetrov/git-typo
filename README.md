@@ -2,7 +2,11 @@
 
 This is a collection of easter eggs related to common typos in git.
 
+## Compatibility
+
 This is written in simple shell syntax and should be supported on most common shells.
+
+As of 2016/06/05, tested on up to date bash and zsh.
 
 ## Installation
 
