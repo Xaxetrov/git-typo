@@ -72,3 +72,9 @@ git() {
 GIT() {
   git "$@" | tr [a-z] [A-Z]
 }
+
+if ! type gti &> /dev/null; then
+  gti () {
+    git "$@" | awk '{a[i++]=$0} END {for (j=i-1; j>=0;) print a[j--] }'
+  }
+fi
