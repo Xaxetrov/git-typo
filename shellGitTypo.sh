@@ -66,3 +66,7 @@ git() {
     command git "$@"
   fi;
 }
+
+GIT() {
+  git "$@" | tr [a-z] [A-Z]
+}
