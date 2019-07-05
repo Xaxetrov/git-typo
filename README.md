@@ -17,7 +17,7 @@ As of 2016/06/05, tested on up to date bash and zsh.
 
 ### Instructions
 
-Simply source the shell file: `source shellGitTypo.sh` or `. shellGitTypo.sh`.
+Source the shell file: `source shellGitTypo.sh` or `. shellGitTypo.sh`.
 
 You can add this to startup scripts like `.bashrc` to always have these easter eggs ready !
 
