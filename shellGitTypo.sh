@@ -54,6 +54,11 @@ git() {
     echo ${bible[$randomIndex]}
     command git commit --amen "${@:3}"
 
+  # reset
+  elif [ "$1" = "rest" ]; then
+    echo "Thank you, I was tired..."
+    sleep 5
+
   # stash
   elif [ "$1" = "stash" -a "$2" = "poop" ]; then
     echo "
@@ -69,7 +74,10 @@ git() {
   fi;
 }
 
+# other functions
+
 GIT() {
+  # convert output to all uppercase
   git "$@" | tr [a-z] [A-Z]
 }
 
@@ -78,3 +86,14 @@ if ! type gti &> /dev/null; then
     git "$@" | awk '{a[i++]=$0} END {for (j=i-1; j>=0;) print a[j--] }'
   }
 fi
+
+gut() {
+  # german proverb array generation
+  proverb[0]="Da liegt der Hund begraben."
+  proverb[1]="Kein Schwein war da"
+  # citation choice and output
+  proverbLength=${#proverb[@]}
+  randomIndex=$((RANDOM % $proverbLength))
+  echo ${proverb[$randomIndex]}
+  git "$@"
+}
