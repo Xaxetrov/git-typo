@@ -57,7 +57,25 @@ git() {
   # reset
   elif [ "$1" = "rest" ]; then
     echo "Thank you, I was tired..."
-    sleep 5
+    noise[0]="*snore*"
+    noise[1]="zzz"
+    noiseLength=${#noise[@]}
+    if [ "$2" = "--hard" ]; then
+      noiseDuration=10
+    elif [ "$2" = "--soft" ]; then
+      noiseDuration=3
+    else
+      noiseDuration=5
+    fi
+    for ((i=0; i<$noiseDuration; i++)); do
+      sleep 1
+      # noise choice and output
+      randomIndex=$((RANDOM % $noiseLength))
+      echo ${noise[$randomIndex]}
+    done
+    sleep 1
+    echo "Wow nice nap !"
+    command git reset "${@:2}"
 
   # stash
   elif [ "$1" = "stash" -a "$2" = "poop" ]; then
