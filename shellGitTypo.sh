@@ -52,7 +52,7 @@ git() {
     bibleLength=${#bible[@]}
     randomIndex=$((RANDOM % $bibleLength))
     echo ${bible[$randomIndex]}
-    command git commit --amen "${@:3}"
+    command git commit --amend "${@:3}"
 
   # reset
   elif [ "$1" = "rest" ]; then
