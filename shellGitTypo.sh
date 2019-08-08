@@ -105,13 +105,6 @@ GIT() {
   git "$@" | tr [a-z] [A-Z]
 }
 
-if ! type gti &> /dev/null; then
-  gti () {
-    # invert output lines
-    git "$@" | awk '{a[i++]=$0} END {for (j=i-1; j>=0;) print a[j--] }'
-  }
-fi
-
 got() {
   if [ "$1" = "checkout" ]; then
     echo "Beware, some people did that and ended up in detached HEAD state."
@@ -120,6 +113,13 @@ got() {
   fi;
   git "$@"
 }
+
+if ! type gti &> /dev/null; then
+  gti () {
+    # invert output lines
+    git "$@" | awk '{a[i++]=$0} END {for (j=i-1; j>=0;) print a[j--] }'
+  }
+fi
 
 gut() {
   # german proverb array generation
