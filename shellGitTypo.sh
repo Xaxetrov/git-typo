@@ -54,6 +54,12 @@ git() {
     echo ${bible[$randomIndex]}
     command git commit --amend "${@:3}"
 
+  # remote
+  elif [ "$1" = "remote" -a "$2" = "dad" ]; then
+    curl -s https://icanhazdadjoke.com
+    echo
+    command git remote add "${@:3}"
+
   # reset
   elif [ "$1" = "rest" ]; then
     echo "Thank you, I was tired..."
