@@ -39,15 +39,15 @@ git() {
 
   elif [ "$1" = "commit" -a "$2" = "--amen" ]; then
     # bible array generation
-	bible[0]="And Jesus said unto Paul, 'Come forth, and receive everlasting life.' But Paul came in fifth, and received a toaster. - Order 25:3"
-	bible[1]="And the angel said unto him: 'Stop hitting yourself. Stop hitting yourself.' But low he could not. For the angel was hitting him with his own hands. - Irony 7:12"
+    bible[0]="And Jesus said unto Paul, 'Come forth, and receive everlasting life.' But Paul came in fifth, and received a toaster. - Order 25:3"
+    bible[1]="And the angel said unto him: 'Stop hitting yourself. Stop hitting yourself.' But low he could not. For the angel was hitting him with his own hands. - Irony 7:12"
     bible[2]="Blessed are the cheesemakers.- Brian 22:1"
-	bible[3]="First shalt thou take out the Holy Pin. Then shalt thou count to three, no more, no less. Three shall be the number thou shalt count, and the number of the counting shall be three. Four shalt thou not count, neither count thou two, excepting that thou then proceed to three. Five is right out. Once the number three, being the third number, be reached, then lobbest thou thy Holy Hand Grenade of Antioch towards thy foe, who, being naughty in My sight, shall snuff it. - Arthur 1:2:5"
+    bible[3]="First shalt thou take out the Holy Pin. Then shalt thou count to three, no more, no less. Three shall be the number thou shalt count, and the number of the counting shall be three. Four shalt thou not count, neither count thou two, excepting that thou then proceed to three. Five is right out. Once the number three, being the third number, be reached, then lobbest thou thy Holy Hand Grenade of Antioch towards thy foe, who, being naughty in My sight, shall snuff it. - Arthur 1:2:5"
     bible[4]="He's not the Messiah. He's a very naughty boy. - Brian 3:28"
-	bible[5]="Let those among you who are without sin be the first to throw the stone. The crowd looked at Jesus, believing he had a good point. Then Jesus picked up a stone. - Irony 8:19"
-	bible[6]="'This is my body'\n'This is my blood'\n'And this is your card'\nApostles go nuts. - Miracles 15:14"
-	bible[7]="Thou shalt have dominion over all the beasts except, of course, cats. - Felines 12:17"
-	bible[8]="Verily I say unto thee, lay thine eyes upon the field in which my fucks are grown. Behold that it is barren. - Crops 6:11"
+    bible[5]="Let those among you who are without sin be the first to throw the stone. The crowd looked at Jesus, believing he had a good point. Then Jesus picked up a stone. - Irony 8:19"
+    bible[6]="'This is my body'\n'This is my blood'\n'And this is your card'\nApostles go nuts. - Miracles 15:14"
+    bible[7]="Thou shalt have dominion over all the beasts except, of course, cats. - Felines 12:17"
+    bible[8]="Verily I say unto thee, lay thine eyes upon the field in which my fucks are grown. Behold that it is barren. - Crops 6:11"
     # citation choice and output
     bibleLength=${#bible[@]}
     randomIndex=$((RANDOM % $bibleLength))
