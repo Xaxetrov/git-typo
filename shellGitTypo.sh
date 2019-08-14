@@ -1,3 +1,5 @@
+# Most ASCII art found on asciiart.eu, unknown artists
+
 git() {
   # enable zsh compatibility
   if [ -n "$ZSH_VERSION" ]; then emulate -L ksh; fi
@@ -31,6 +33,73 @@ git() {
       |_|  |_|        |_||
        \_\  \_\        \_\\'
     command git add "${@:2}"
+
+  # blame
+  elif [ "$1" = "blam" ]; then
+    clear; echo '
+      )
+     (
+    .-`-.
+    :   :
+    :TNT:
+    :___:'
+    sleep 0.5; clear; echo '
+    \|/
+   - o -
+    /-`-.
+    :   :
+    :TNT:
+    :___:'
+    sleep 0.5; clear; echo '
+
+
+    .---.
+    : | :
+    :-o-:
+    :_|_:'
+    sleep 0.5; clear; echo '
+
+
+    .---.
+    (\|/)
+    --0--
+    (/|\)'
+    sleep 0.5; clear; echo "
+
+
+   '.\|/.'
+   (\   /)
+   - -O- -
+   (/   \)
+   ,'/|\'."
+    sleep 0.5; clear; echo '
+
+`.  \ | /  ,`
+  `. `.` ,`
+ ( .`.|.` .)
+ - ~ -0- ~ -
+ ('
+    sleep 0.5; clear; echo '
+`,`|`.` )
+  .` .`. `.
+,`  / | \  `.
+    \ `  "
+ ` . `.` ,`
+ . `` ,`. "
+   ~ (   ~ -
+`'
+    sleep 0.5; clear; echo '
+. `,`|` ` .
+  .`  "  `
+,   ` , `  `
+
+   (  ) (
+    ) ( )
+    (  )
+     ) /
+    ,---.'
+    sleep 1; clear
+    command git blame "${@:2}"
 
   # commit
   elif [ "$1" = "vommit" ]; then
