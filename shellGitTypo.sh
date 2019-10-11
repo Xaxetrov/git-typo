@@ -151,6 +151,16 @@ git() {
     sleep 1
     echo "Wow nice nap !"
     command git reset "${@:2}"
+    
+  elif [ "$1" = "merde" ]; then
+    echo "
+  )  )
+ (   ) (
+  ) _   )
+   ( \_
+ _(_\ \)__
+(____\___))"
+    command git merge "${@:2}" "${@:3}"
 
   # stash
   elif [ "$1" = "stash" -a "$2" = "poop" ]; then
