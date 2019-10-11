@@ -160,7 +160,7 @@ git() {
    ( \_
  _(_\ \)__
 (____\___))"
-    command git merge "${@:2}" "${@:3}"
+    command git merge "${@:2}"
 
   # stash
   elif [ "$1" = "stash" -a "$2" = "poop" ]; then
