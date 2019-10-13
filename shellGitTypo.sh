@@ -221,13 +221,7 @@ git() {
     command git reset "${@:2}"
     
   elif [ "$1" = "merde" ]; then
-    echo "
-  )  )
- (   ) (
-  ) _   )
-   ( \_
- _(_\ \)__
-(____\___))"
+    echo "$gitTypoPoop"
     command git merge "${@:2}"
 
   # stash
