@@ -1,6 +1,6 @@
 # git-typo
 
-This is a collection of easter eggs related to common typos in git.
+A collection of easter eggs related to common typos in git.
 
 ## Compatibility
 
