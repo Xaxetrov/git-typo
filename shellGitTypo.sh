@@ -95,6 +95,37 @@ gitTypoPoop="
  _(_\ \)__
 (____\___))"
 
+gitTypoStatue="
+         ^
+       ,' \\
+       L\"\"/
+       \` |
+       J |
+       J L
+       | | .  ,
+       | |.\`v_L.'
+      // ,>-(-\'_
+      \\\`' \ - /-.
+      /   /\`\"\"|
+       ),'    \`-
+      (    ,-'  \\
+       ) ,' ,'   h
+      / /  /     \`)--..
+      \/  /       \  <)
+       <        ,  L<'
+       F/     _/  ,'
+       L   ,-'     \\
+       |         ___L
+      /         (  F
+     J      ___,'  L
+     |    ,'       |
+     F  ,'         |
+    (_,--..__  mt-2|_
+   ,'        \`\"\`--.._\\
+ ,' /                 \\
+/                     (_
+"
+
 # arrays
 
 # bible
@@ -228,6 +259,9 @@ git() {
   elif [ "$1" = "stash" -a "$2" = "poop" ]; then
     echo "$gitTypoPoop"
     command git stash pop "${@:3}"
+  elif [ "$1" = "statue" ]; then
+    echo "$gitTypoStatue"
+    command git status
   else
     command git "$@"
   fi;
