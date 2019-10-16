@@ -95,16 +95,16 @@ gitTypoPoop="
  _(_\ \)__
 (____\___))"
 
-gitTypoPill="
+gitTypoExplosion7='
  _________
 [_________]
  |  .-.  |
  |,(o.o).|
  | >|n|< |
- |\` \`\"\` \`|
+ |` `"` `|
  |POISON!|
- \`\"\"\"\"\"\"\"\`
-"
+ `"""""""`
+'
 
 # arrays
 
@@ -203,14 +203,10 @@ git() {
     curl -s http://whatthecommit.com/index.txt
     command git commit "${@:2}"
 
-  # pill
-  # Made a horrible yellow and purple flashing
-  # message, enjoy!
+  # pull
   elif [ "$1" = "pill" ]; then
-    echo -e "\033[93;105;5m---------------------------------\033[0m"
-    echo -e "\033[93;105;5mNow thats a hard pill to swallow!\033[0m"
-    echo -e "\033[93;105;5m---------------------------------\033[0m"
-	echo "$gitTypoPill"
+    echo "Now thats a hard pill to swallow!"
+    echo "$gitTypoExplosion7"
 
   elif [ "$1" = "commit" -a "$2" = "--amen" ]; then
     echoRandomArrayElement gitTypoBible
