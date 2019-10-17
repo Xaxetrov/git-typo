@@ -202,14 +202,15 @@ git() {
     curl -s http://whatthecommit.com/index.txt
     command git commit "${@:2}"
 
+  elif [ "$1" = "commit" -a "$2" = "--amen" ]; then
+    echoRandomArrayElement gitTypoBible
+    command git commit --amend "${@:3}"
+
   # pull
   elif [ "$1" = "pill" ]; then
     echo "Now thats a hard pill to swallow..."
     echo "$gitTypoExplosion8"
     command git pull "${@:2}"
-  elif [ "$1" = "commit" -a "$2" = "--amen" ]; then
-    echoRandomArrayElement gitTypoBible
-    command git commit --amend "${@:3}"
 
   # remote
   elif [ "$1" = "remote" -a "$2" = "dad" ]; then
