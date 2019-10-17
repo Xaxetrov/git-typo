@@ -87,15 +87,7 @@ gitTypoExplosion7='
      ) /
     ,---.'
     
-gitTypoPoop="
-  )  )
- (   ) (
-  ) _   )
-   ( \_
- _(_\ \)__
-(____\___))"
-
-gitTypoExplosion7='
+gitTypoExplosion8='
  _________
 [_________]
  |  .-.  |
@@ -103,8 +95,15 @@ gitTypoExplosion7='
  | >|n|< |
  |` `"` `|
  |POISON!|
- `"""""""`
-'
+ `"""""""`'
+
+gitTypoPoop="
+  )  )
+ (   ) (
+  ) _   )
+   ( \_
+ _(_\ \)__
+(____\___))"
 
 # arrays
 
@@ -205,9 +204,9 @@ git() {
 
   # pull
   elif [ "$1" = "pill" ]; then
-    echo "Now thats a hard pill to swallow!"
-    echo "$gitTypoExplosion7"
-
+    echo "Now thats a hard pill to swallow..."
+    echo "$gitTypoExplosion8"
+    command git pull "${@:2}"
   elif [ "$1" = "commit" -a "$2" = "--amen" ]; then
     echoRandomArrayElement gitTypoBible
     command git commit --amend "${@:3}"
