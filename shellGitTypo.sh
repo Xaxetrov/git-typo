@@ -259,9 +259,12 @@ git() {
   elif [ "$1" = "stash" -a "$2" = "poop" ]; then
     echo "$gitTypoPoop"
     command git stash pop "${@:3}"
+  
+  # status
   elif [ "$1" = "statue" ]; then
     echo "$gitTypoStatue"
-    command git status
+    command git status "${@:2}"
+    
   else
     command git "$@"
   fi;
