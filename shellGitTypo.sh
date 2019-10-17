@@ -95,6 +95,38 @@ gitTypoPoop="
  _(_\ \)__
 (____\___))"
 
+# Staute of Liberty by b'ger
+gitTypoStatue="
+         ^
+       ,' \\
+       L\"\"/
+       \` |
+       J |
+       J L
+       | | .  ,
+       | |.\`v_L.'
+      // ,>-(-\'_
+      \\\`' \ - /-.
+      /   /\`\"\"|
+       ),'    \`-
+      (    ,-'  \\
+       ) ,' ,'   h
+      / /  /     \`)--..
+      \/  /       \  <)
+       <        ,  L<'
+       F/     _/  ,'
+       L   ,-'     \\
+       |         ___L
+      /         (  F
+     J      ___,'  L
+     |    ,'       |
+     F  ,'         |
+    (_,--..__  mt-2|_
+   ,'        \`\"\`--.._\\
+ ,' /                 \\
+/                     (_
+"
+
 # arrays
 
 # bible
@@ -220,6 +252,7 @@ git() {
     echo "Wow nice nap !"
     command git reset "${@:2}"
     
+  # merge
   elif [ "$1" = "merde" ]; then
     echo "$gitTypoPoop"
     command git merge "${@:2}"
@@ -228,6 +261,12 @@ git() {
   elif [ "$1" = "stash" -a "$2" = "poop" ]; then
     echo "$gitTypoPoop"
     command git stash pop "${@:3}"
+  
+  # status
+  elif [ "$1" = "statue" ]; then
+    echo "$gitTypoStatue"
+    command git status "${@:2}"
+    
   else
     command git "$@"
   fi;
