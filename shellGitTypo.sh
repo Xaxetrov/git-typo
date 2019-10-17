@@ -95,6 +95,7 @@ gitTypoPoop="
  _(_\ \)__
 (____\___))"
 
+# Staute of Liberty by b'ger
 gitTypoStatue="
          ^
        ,' \\
@@ -251,6 +252,7 @@ git() {
     echo "Wow nice nap !"
     command git reset "${@:2}"
     
+  # merge
   elif [ "$1" = "merde" ]; then
     echo "$gitTypoPoop"
     command git merge "${@:2}"
