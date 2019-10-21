@@ -87,6 +87,16 @@ gitTypoExplosion7='
      ) /
     ,---.'
     
+gitTypoPill='
+ _________
+[_________]
+ |  .-.  |
+ |,(o.o).|
+ | >|n|< |
+ |` `"` `|
+ |POISON!|
+ `"""""""`'
+
 gitTypoPoop="
   )  )
  (   ) (
@@ -227,6 +237,12 @@ git() {
   elif [ "$1" = "commit" -a "$2" = "--amen" ]; then
     echoRandomArrayElement gitTypoBible
     command git commit --amend "${@:3}"
+
+  # pull
+  elif [ "$1" = "pill" ]; then
+    echo "Now thats a hard pill to swallow..."
+    echo "$gitTypoPill"
+    command git pull "${@:2}"
 
   # remote
   elif [ "$1" = "remote" -a "$2" = "dad" ]; then
