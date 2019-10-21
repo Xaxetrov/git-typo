@@ -87,7 +87,7 @@ gitTypoExplosion7='
      ) /
     ,---.'
     
-gitTypoExplosion8='
+gitTypoPill='
  _________
 [_________]
  |  .-.  |
@@ -209,7 +209,7 @@ git() {
   # pull
   elif [ "$1" = "pill" ]; then
     echo "Now thats a hard pill to swallow..."
-    echo "$gitTypoExplosion8"
+    echo "$gitTypoPill"
     command git pull "${@:2}"
 
   # remote
