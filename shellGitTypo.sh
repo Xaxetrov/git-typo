@@ -137,6 +137,13 @@ gitTypoStatue="
 /                     (_
 "
 
+gitTypoHeart='
+╔══╗
+╚╗╔╝
+╔╝(¯`v´¯)
+╚══`.¸.[GIT]
+'
+
 # arrays
 
 # bible
@@ -282,6 +289,12 @@ git() {
   elif [ "$1" = "statue" ]; then
     echo "$gitTypoStatue"
     command git status "${@:2}"
+
+  # log
+  elif [ "$1" = "lov" ]; then
+    clear; echo "$gitTypoHeart"
+    sleep 1.5; clear
+    command git log "${@:2}"
     
   else
     command git "$@"
