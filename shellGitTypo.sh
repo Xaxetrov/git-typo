@@ -87,6 +87,23 @@ gitTypoExplosion7='
      ) /
     ,---.'
     
+gitTypoHeart='
+     ******       ******
+   **********   **********
+ ************* *************
+*****************************
+***********   *   ***********
+***********  GIT  **********
+ ***********     **********
+   *********** **********
+     ******************
+       ***************
+         ***********
+           *******
+             ***
+              *
+'
+
 gitTypoPill='
  _________
 [_________]
@@ -136,13 +153,6 @@ gitTypoStatue="
  ,' /                 \\
 /                     (_
 "
-
-gitTypoHeart='
-╔══╗
-╚╗╔╝
-╔╝(¯`v´¯)
-╚══`.¸.[GIT]
-'
 
 # arrays
 
@@ -245,6 +255,12 @@ git() {
     echoRandomArrayElement gitTypoBible
     command git commit --amend "${@:3}"
 
+  # log
+  elif [ "$1" = "lov" ]; then
+    echo "$gitTypoHeart"
+    sleep 1.5
+    command git log "${@:2}"
+
   # pull
   elif [ "$1" = "pill" ]; then
     echo "Now thats a hard pill to swallow..."
@@ -289,12 +305,6 @@ git() {
   elif [ "$1" = "statue" ]; then
     echo "$gitTypoStatue"
     command git status "${@:2}"
-
-  # log
-  elif [ "$1" = "lov" ]; then
-    clear; echo "$gitTypoHeart"
-    sleep 1.5; clear
-    command git log "${@:2}"
     
   else
     command git "$@"
