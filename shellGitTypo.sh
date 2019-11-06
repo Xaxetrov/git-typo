@@ -87,6 +87,23 @@ gitTypoExplosion7='
      ) /
     ,---.'
     
+gitTypoHeart='
+     ******       ******
+   **********   **********
+ ************* *************
+*****************************
+***********   *   ***********
+***********  GIT  **********
+ ***********     **********
+   *********** **********
+     ******************
+       ***************
+         ***********
+           *******
+             ***
+              *
+'
+
 gitTypoPill='
  _________
 [_________]
@@ -237,6 +254,12 @@ git() {
   elif [ "$1" = "commit" -a "$2" = "--amen" ]; then
     echoRandomArrayElement gitTypoBible
     command git commit --amend "${@:3}"
+
+  # log
+  elif [ "$1" = "lov" ]; then
+    echo "$gitTypoHeart"
+    sleep 1.5
+    command git log "${@:2}"
 
   # pull
   elif [ "$1" = "pill" ]; then
