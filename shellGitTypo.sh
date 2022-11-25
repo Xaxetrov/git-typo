@@ -248,7 +248,7 @@ git() {
 
   # commit
   elif [ "$1" = "vommit" ]; then
-    curl -s http://whatthecommit.com/index.txt
+    curl -s https://whatthecommit.com/index.txt
     command git commit "${@:2}"
 
   elif [ "$1" = "commit" -a "$2" = "--amen" ]; then
